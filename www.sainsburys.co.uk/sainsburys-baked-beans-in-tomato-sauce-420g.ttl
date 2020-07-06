@@ -1,0 +1,61 @@
+@base <http://example.org/>.
+prefix : <http://example.org/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+prefix gs1: <http://gs1.org/>
+prefix foodProduct: <gs1:FoodBeverageTobaccoProduct>
+prefix schema: <http://schema.org/>
+
+
+<http://example.org/#sainsburys-baked-beans-in-tomato-sauce-420g>
+  rdf:type foodProduct: ;
+  schema:url "https://www.sainsburys.co.uk/gol-ui/product/baked-beans-canned-pasta/sainsburys-baked-beans-in-tomato-sauce-420g" ;
+  gs1:FoodBeverageTobaccoProduct:gtin8 "00358484" ;
+  gs1:FoodBeverageTobaccoProduct:energyPerNutrientBasis <http://example.org/#energyPerNutrientBasis> ;
+  gs1:FoodBeverageTobaccoProduct:fatPerNutrientBasis <http://example.org/#fatPerNutrientBasis> ;
+  gs1:FoodBeverageTobaccoProduct:saturatedFatPerNutrientBasis <http://example.org/#saturatedFatPerNutrientBasis> ;
+  gs1:FoodBeverageTobaccoProduct:sugarsPerNutrientBasis <http://example.org/#sugarsPerNutrientBasis> ;
+  gs1:FoodBeverageTobaccoProduct:saltPerNutrientBasis <http://example.org/#saltPerNutrientBasis> ;
+  gs1:FoodBeverageTobaccoProduct:servingSize <http://example.org/#servingSize> ;
+  gs1:FoodBeverageTobaccoProduct:grossWeight <http://example.org/#grossWeight> ;
+  gs1:FoodBeverageTobaccoProduct:dietCode: <http://example.org/#dietTypeCode> ;
+  gs1:FoodBeverageTobaccoProduct:numberOfServingsPerPackage "2" . 
+
+<http://example.org/#energyPerNutrientBasis>
+  rdf:type gs1:NutritionMeasurementType ;
+  gs1:NutritionMeasurementType:unitCode "KJO" ;
+  gs1:NutritionMeasurementType:value "710" .
+  
+<http://example.org/#fatPerNutrientBasis>
+  rdf:type gs1:NutritionMeasurementType ;
+  gs1:NutritionMeasurementType:unitCode "CTG" ;
+  gs1:NutritionMeasurementType:value "0.9" .
+  
+<http://example.org/#saturatedFatPerNutrientBasis>
+  rdf:type gs1:NutritionMeasurementType ;
+  gs1:NutritionMeasurementType:unitCode "CTG" ;
+  gs1:NutritionMeasurementType:value "0.2" .
+  
+<http://example.org/#sugarsPerNutrientBasis>
+  rdf:type gs1:NutritionMeasurementType ;
+  gs1:NutritionMeasurementType:unitCode "CTG" ;
+  gs1:NutritionMeasurementType:value "8.5" .
+  
+<http://example.org/#saltPerNutrientBasis>
+  rdf:type gs1:NutritionMeasurementType ;
+  gs1:NutritionMeasurementType:unitCode "CTG" ;
+  gs1:NutritionMeasurementType:value "1.05" .
+  
+<http://example.org/#servingSize>
+  rdf:type gs1:QuantitiveValue ;
+  gs1:NutritionMeasurementType:unitCode "CTG" ;
+  gs1:NutritionMeasurementType:value "200" .
+
+<http://example.org/#grossWeight>
+  rdf:type gs1:QuantitiveValue ;
+  gs1:NutritionMeasurementType:unitCode "CTG" ;
+  gs1:NutritionMeasurementType:value "400" .
+
+<http://example.org/#dietTypeCode>
+  rdf:type gs1:DietTypeCodeDetails ;
+  gs1:DietTypeCodeDetails:dietType "VEGAN" ;
+  gs1:DietTypeCodeDetails:dietTypeSubcode ""@en .
